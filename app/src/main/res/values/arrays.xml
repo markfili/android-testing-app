@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="colors">
+        <item>@color/primary_dark_material_dark</item>
+        <item>@color/primary_dark_material_light</item>
+        <item>@color/abc_primary_text_disable_only_material_dark</item>
+        <item>@color/material_blue_grey_800</item>
+    </integer-array>
+</resources>
