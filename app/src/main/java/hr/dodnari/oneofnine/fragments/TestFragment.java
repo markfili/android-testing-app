@@ -3,11 +3,11 @@ package hr.dodnari.oneofnine.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -19,11 +19,10 @@ import hr.dodnari.oneofnine.R;
 public class TestFragment extends Fragment {
 
     public static final String POSITION = "position";
+    private static final String TAG = TestFragment.class.getSimpleName();
 
-    @Bind(R.id.textview)
-    TextView textView;
-
-    CardView cardView;
+    @Bind(R.id.recycler_view)
+    RecyclerView recyclerView;
 
     private int[] colors;
     private int position;
@@ -44,8 +43,10 @@ public class TestFragment extends Fragment {
         super.onCreate(savedInstanceState);
         position = getArguments() != null ? getArguments().getInt(POSITION) : 1;
         colors = getResources().getIntArray(R.array.colors);
-    }
 
+//        TODO add context to gridlayoutmanager
+//        recyclerView.setLayoutManager(new GridLayoutManager());
+    }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
@@ -55,12 +56,9 @@ public class TestFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_pager_item, container, false);
+        View v = inflater.inflate(R.layout.fragment_pager, container, false);
         ButterKnife.bind(this, v);
         v.setBackgroundColor(colors[position]);
-
-        cardView = (CardView) v.findViewById(R.id.card_view);
-        textView.setText("" + position);
 
         return v;
     }
