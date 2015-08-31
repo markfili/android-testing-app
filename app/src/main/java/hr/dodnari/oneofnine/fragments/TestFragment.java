@@ -50,11 +50,6 @@ public class TestFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        setupCardView();
-    }
-
-    private void setupCardView() {
     }
 
     @Nullable
@@ -65,6 +60,7 @@ public class TestFragment extends Fragment {
         v.setBackgroundColor(colors[position]);
 
         cardView = (CardView) v.findViewById(R.id.card_view);
+        textView.setText("" + position);
 
         return v;
     }
