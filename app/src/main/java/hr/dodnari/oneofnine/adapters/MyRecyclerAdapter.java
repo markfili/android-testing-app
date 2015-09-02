@@ -2,6 +2,7 @@ package hr.dodnari.oneofnine.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -23,13 +24,13 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<FragmentPagerViewHol
 
     @Override
     public FragmentPagerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = View.inflate(context, R.layout.list_view_text_item, parent);
+        View v = LayoutInflater.from(context).inflate(R.layout.list_view_text_item, parent, false);
         return new FragmentPagerViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(FragmentPagerViewHolder holder, int position) {
-        holder.textView.setText(position);
+        holder.textView.setText("" + position);
     }
 
     @Override
@@ -40,13 +41,11 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<FragmentPagerViewHol
 
 class FragmentPagerViewHolder extends RecyclerView.ViewHolder {
 
-    @Bind(R.id.textview)
+    @Bind(R.id.cardview_textview)
     TextView textView;
 
     public FragmentPagerViewHolder(View itemView) {
         super(itemView);
         ButterKnife.bind(this, itemView);
     }
-
-
 }
