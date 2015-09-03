@@ -1,39 +1,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:orderInCategory="1"
-        android:title="" />
-    <item android:title="Section" >
+    <item android:title="Section one" android:orderInCategory="1">
         <menu>
             <item
-                android:checked="true"
+                android:id="@+id/help"
                 android:icon="@drawable/ic_add_white_24dp"
                 android:title="@string/help" />
 
             <item
                 android:icon="@drawable/ic_menu_white_24dp"
-                android:title="@string/help" />
+                android:title="test" />
             <item
                 android:icon="@drawable/ic_menu_white_24dp"
-                android:title="PRVI" />
+                android:title="test PRVI" />
         </menu>
     </item>
-    <group android:orderInCategory="3">
 
+    <group android:orderInCategory="2">
         <item
             android:id="@+id/drawer_home"
-            android:checked="true"
             android:icon="@drawable/ic_add_white_24dp"
-            android:title="@string/help" />
+            android:title="test" />
 
         <item
             android:id="@+id/drawer_favourite"
             android:icon="@drawable/ic_menu_white_24dp"
-            android:title="@string/help" />
+            android:title="test" />
         <item
             android:id="@+id/drawer_settings"
             android:icon="@drawable/ic_menu_white_24dp"
-            android:title="DRUGI" />
+            android:title="test DRUGI" />
 
     </group>
 </menu>

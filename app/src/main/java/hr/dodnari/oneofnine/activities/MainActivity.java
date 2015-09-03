@@ -1,4 +1,4 @@
-package hr.dodnari.oneofnine;
+package hr.dodnari.oneofnine.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import hr.dodnari.oneofnine.R;
 import hr.dodnari.oneofnine.adapters.MyPagerAdapter;
 import hr.dodnari.oneofnine.base.BaseActivity;
 
@@ -25,6 +26,7 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setActivityTitle(R.string.title_activity_main);
+        useTabs(true);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setupViewPager();
