@@ -3,7 +3,7 @@
 ### What is this repository for? ###
 
 * This is an Android application made to test Android's Support libraries using new elements they contain that make creating Material looking applications easier. 
-* 1.0 - doesn't matter
+* version 1.0
 
 ### How do I get set up? ###
 
