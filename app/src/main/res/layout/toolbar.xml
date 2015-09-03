@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- appbar now obscured, it's not visible in BaseActivity on view binding.
+it has something to do with adding RelativeLayout around the toolbar_container and activity_content in toolbar.xml -->
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:navigationIcon="@drawable/ic_menu_white_24dp"
+        tools:showIn="@layout/activity_main" />
+
+    <!-- POSSIBLE SWAP with:
+PagerTitleStrip - Adds a non-interactive title strip, that can be added as a child of ViewPager.
+PagerTabStrip - Adds a navigation widget for switching between paged views, that can also be used with ViewPager.
+-->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        style="@style/MyCustomTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:minHeight="?attr/actionBarSize"
+        app:tabGravity="fill" />
+
+</android.support.design.widget.AppBarLayout>
