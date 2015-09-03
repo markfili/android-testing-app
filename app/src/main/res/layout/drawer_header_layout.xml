@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
+    android:layout_height="150dp"
     android:background="@color/accent_material_light"
+    android:orientation="vertical"
     android:paddingBottom="8dp"
-    android:paddingStart="8dp"
     android:paddingEnd="8dp"
-    android:paddingRight="8dp"
     android:paddingLeft="8dp"
-    android:orientation="vertical">
+    android:paddingRight="8dp"
+    android:paddingStart="8dp">
+
+    <ImageView
+        android:id="@+id/nav_drawer_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_menu_white_24dp" />
 
     <TextView
         android:layout_width="match_parent"

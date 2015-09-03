@@ -26,8 +26,9 @@ PagerTabStrip - Adds a navigation widget for switching between paged views, that
         style="@style/MyCustomTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="horizontal"
         android:minHeight="?attr/actionBarSize"
+        android:scrollbars="horizontal"
+        android:visibility="gone"
         app:tabGravity="fill" />
 
 </android.support.design.widget.AppBarLayout>
