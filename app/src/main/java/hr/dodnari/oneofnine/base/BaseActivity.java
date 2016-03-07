@@ -78,6 +78,12 @@ public class BaseActivity extends AppCompatActivity {
                 return false;
             }
         });
+        navigationView.getHeaderView(0).findViewById(R.id.nav_drawer_image).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onNaiveClick();
+            }
+        });
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerLayout.setDrawerListener(drawerToggle);
     }
@@ -136,7 +142,6 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick(R.id.nav_drawer_image)
     protected void onNaiveClick() {
         Toast.makeText(this, "Got you! This does nothing!", Toast.LENGTH_LONG).show();
     }
